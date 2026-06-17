@@ -1,0 +1,50 @@
+/* SIDEBAR CONTAINER */
+.side-bar {
+    background-color: #ffffff;
+    width: 75vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    padding: 20px 15px;
+}
+
+/* MAIN BODY CONTAINER WRAPPER */
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    transition: transform 0.3s ease-out;
+}
+
+/* TOP NAVIGATION HEADER */
+header {
+    background-color: black;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+    position: relative;
+    padding: 0 15px;
+}
+
+/* MASTER SIDEBAR TRIGGER STATES */
+body.menu-open {
+    overflow: hidden; /* Freeze page scroll when open */
+    height: 100vh;
+    .side-bar {
+        transform: translateX(0);
+    }
+    
+    .main-wrapper {
+        opacity: 0.5;
+        transform: translateX(75vw);
+    }
+}
