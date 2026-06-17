@@ -1,6 +1,6 @@
 /* SIDEBAR CONTAINER */
 .side-bar {
-    background-color: #ffffff;
+    background-color: #121214;
     width: 75vw;
     height: 100vh;
     position: fixed;
@@ -37,14 +37,27 @@ header {
 
 /* MASTER SIDEBAR TRIGGER STATES */
 body.menu-open {
-    overflow: hidden; /* Freeze page scroll when open */
+    overflow: hidden;
     height: 100vh;
+
     .side-bar {
         transform: translateX(0);
+        height: 100vh;
     }
     
     .main-wrapper {
+        overflow: hidden;
+        height: 100vh;
         opacity: 0.5;
         transform: translateX(75vw);
     }
+}
+
+.tabs {
+    background: linear-gradient(90deg, #ffffff 30%, #e00b6b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
