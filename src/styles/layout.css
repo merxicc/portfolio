@@ -52,12 +52,3 @@ body.menu-open {
         transform: translateX(75vw);
     }
 }
-
-.tabs {
-    background: linear-gradient(90deg, #ffffff 30%, #e00b6b 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-}

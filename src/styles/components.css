@@ -10,11 +10,10 @@
     padding: 10px 15px;
     border: 1px solid #000000;
     border-radius: 12px;
-    /* Clean, soft starting shadow */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(140, 17, 109, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(224, 11, 107, 0.2);
     background-color: #121212;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Custom bezier for snappy physics */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     
     .goku {
         width: 35px;
@@ -27,31 +26,26 @@
     .real-name {
         font-size: 16px;
         font-weight: bold;
-        background: linear-gradient(90deg, #ffffff 30%, #e00b6b 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
+        color: #ffffff; /* Solid white text */
         transition: all 0.2s ease;
     }
     
-    /* Hover state: Card lifts up slightly, shadow expands */
+    /* Hover state: Card turns white, text turns solid black */
     &:hover {
         background: #ffffff;
-        transform: translateY(-2px); /* Lifts up */
+        transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
         
         .real-name {
-            -webkit-text-fill-color: #000000;
-            text-fill-color: #000000;
+            color: #000000; /* Solid black */
         }
     }
 
-    /* REALISTIC CLICK STATE: Card sinks down, shadow flattens tightly */
+    /* Click state: Snaps down */
     &:active {
-        transform: translateY(2px) scale(0.98); /* Sinks down and slightly shrinks */
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6); /* Tight, flat shadow */
-        transition: all 0.05s ease; /* Fast response time for the click */
+        transform: translateY(2px) scale(0.98);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+        transition: all 0.05s ease;
     }
 }
 
@@ -79,39 +73,33 @@
         width: 100%;
         font-size: 20px;
         font-weight: bold;
-        background: linear-gradient(135deg, #ffffff 0%, #e00b6b 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-        border-left: 12px solid #e00b6b;
+        background: #121212; /* Clean dark background */
+        color: #ffffff; /* Solid white text */
+        border-left: 12px solid #e00b6b; /* Solid magenta bar */
         border-radius: 12px;
         text-align: left;
-        /* Initial physical depth shadow */
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(140, 17, 109, 0.2);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(224, 11, 107, 0.2);
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         
-        /* Hover state: Link lifts up, text shifts, shadow grows deep */
+        /* Hover state: Card turns white, text and border turn solid black */
         &:hover {
             background: #ffffff;
-            border-color: #000000;
-            -webkit-text-fill-color: #000000;
-            text-fill-color: #000000;
-            transform: translateY(-2px); /* Lifts up */
+            color: #000000; /* Solid black text */
+            border-color: #000000; /* Solid black left accent bar */
+            transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
             padding-left: 18px; 
         }
         
-        /* REALISTIC CLICK STATE: Link smashes down into the UI layer */
+        /* Click state: Card turns solid magenta, text and border turn solid white */
         &:active {
-            background: #e00b6b;
-            border-color: #ffffff;
-            -webkit-text-fill-color: #ffffff;
-            text-fill-color: #ffffff;
-            transform: translateY(3px) scale(0.97); /* Pushed way down and slightly compressed */
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.8); /* Shadow is almost completely hidden underneath */
+            background: #e00b6b; /* Solid magenta background */
+            color: #ffffff; /* Solid white text */
+            border-color: #ffffff; /* Solid white left bar */
+            transform: translateY(3px) scale(0.97);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.8);
             padding-left: 14px;
-            transition: all 0.05s ease; /* Snappy, immediate tactile feedback */
+            transition: all 0.05s ease;
         }
     }
 }
@@ -134,19 +122,16 @@ header .side-nav-btn {
     transition: all 0.2s ease;
     
     &:active {
-        transform: scale(0.9); /* Gives the hamburger menu icon a quick pop effect */
-        color: mediumvioletred;
+        transform: scale(0.9);
+        color: #e00b6b; /* Solid magenta accent on active menu button */
     }
 }
 
 .title {
-    background: linear-gradient(90deg, #ffffff 30%, #e00b6b 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    color: #e00b6b; /* Clean solid magenta title */
     flex-grow: 1;
     text-align: center;
     margin-right: 32px;
     font-weight: bold;
+    font-size: 24px;
 }
