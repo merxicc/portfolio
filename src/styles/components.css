@@ -143,3 +143,29 @@ header .side-nav-btn {
     animation: none !important;
 }
 
+body.play-music .play-btn #playIcon::before {
+    content: "\f04c"; /* Font Awesome pause icon code */
+}
+
+/* Base style for the round play button */
+.play-btn {
+    background-color: #ffcc00; 
+    color: #000;
+    border: none;
+    width: 60px;               
+    height: 60px;              
+    font-size: 24px;           
+    border-radius: 50%;        
+    cursor: pointer;
+    margin-bottom: 20px;       /* Pushes the Welcome text down nicely */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+.play-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);    
+}

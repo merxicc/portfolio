@@ -22,13 +22,26 @@
 <body>
 <div class="preloader">
     <div class="loader-box">
-        <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+        <audio id="myAudio" src="public/assets/audios/kanta.mp3" loop></audio>
         
+        <button id="audioBtn" class="play-btn">
+            <i id="playIcon" class="fa-solid fa-play"></i>
+        </button>
+
         <h1 class="welcome-text">WELCOME, LOKOKABOY</h1>
-        <span class="under-dev">UnderDevelopment</span>
+
+        <div class="status-container">
+            <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+            <span class="under-dev">UnderDevelopment</span>
+        </div>
+
         <div class="loading-bar"></div>
     </div>
 </div>
+
+
+
+
 
         <nav class="side-bar">
                 <div id="profile" class="profile-tab">

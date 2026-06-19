@@ -23,8 +23,14 @@
     transition: transform 0.3s ease-out;
     filter: blur(20px);
     opacity: 0;
-    animation: revealPortfolio 1s ease-out 3s forwards;
+    /* Animation removed from here */
 }
+
+/* This class will handle revealing the website layout */
+.main-wrapper.reveal {
+    animation: revealPortfolio 1s ease-out forwards;
+}
+
 
 /* TOP NAVIGATION HEADER */
 header {
